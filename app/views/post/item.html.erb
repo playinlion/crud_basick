@@ -1,0 +1,29 @@
+<div class="container">
+  <h1> <%= @one_post.id%> 번째 글입니다.</h1>
+  <h2><%= @one_post.title%></h2>
+  <p><%= @one_post.content%></p>
+
+  <a href="/show">게시판으로 돌아가기</a><br>
+  <a href="/update_view/<%= @one_post.id %>">수정</a>
+  <a href="/destroy/<%= @one_post.id %>">삭제</a>
+  <br>
+
+  <h5>댓글이다</h5>
+  <form action="/item/<%= @one_post.id%>/comment/create" method="post">
+    <div class="form-group">
+      <label for="exampleInputEmail1">댓글 달기</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="content">
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <hr>
+    <p>댓글이 댓글바글</p><br>
+    <% @comment.each do |comment| %>
+      <p> -> <%= comment.content %></p>
+    <% end%>
+  <hr>
+
+
+</div>

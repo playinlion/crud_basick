@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>수정 화면입니다.</h1>
+
+  <form action="/update/<%= @one_post.id %>" method="post">
+    <div class="form-group">
+      <label for="exampleInputEmail1">글 제목</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" value="<%= @one_post.title%>">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleTextarea">글 내용</label>
+      <textarea class="form-control" id="exampleTextarea" rows="8" name="content"><%= @one_post.content%></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">수정완료</button>
+  </form>
+
+
+
+
+  <a href="/show">게시판으로 돌아가기</a>
+</div>

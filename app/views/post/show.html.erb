@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>게시판입니다. 유후</h1>
+
+  <% @all_post.each do |a| %>
+    글번호 : <%= a.id %> <br>
+    <a href="/item/<%= a.id %>">제목 : <%= a.title %> </a> <br><hr>
+  <% end %>
+
+
+
+  <a href="/">돌아가기</a>
+  <a href="/create">글쓰기</a>
+</div>
