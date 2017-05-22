@@ -10,9 +10,9 @@ class CommentController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find()
+    @comment = Comment.find(params[:id])
     @comment.destroy
 
-    redirect_to "/item/#{}"
+    redirect_to "/item/#{params[:id]}"
   end
 end
