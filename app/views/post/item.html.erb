@@ -22,9 +22,11 @@
     <p>댓글이 댓글바글</p><br>
     <% @comment.each do |comment| %>
       <p>
-        -> <%= comment.content %> <a href="/item/<%= @one_post.id%>/comment/destroy/<%= comment.id %>">[x]</a>
+        -> <%= comment.content %>
+        <a href="/item/<%= @one_post.id%>/comment/destroy/<%= comment.id %>"
+          data-method="post">[x]</a>
       </p>
-    <% end%>
+    <% end %>
   <hr>
 
 

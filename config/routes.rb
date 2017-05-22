@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   get 'update_view/:id' => 'post#update_view'
 
   post '/item/:id/comment/create' => 'comment#create'
-  post '/item/:id/comment/destroy/:id' => 'comment#destroy'
+  post '/item/:post_id/comment/destroy/:comment_id' => 'comment#destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
